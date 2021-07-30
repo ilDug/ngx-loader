@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="box">
+                <h1>A</h1>
+            </div>
+            <div class="box" *dagLoader="loading">
+                <h1>B</h1>
+            </div>
+            <div class="box">
+                <h1>C</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>
+                <a href="#" (click)="load()" class="btn btn-primary">Toggle Loader</a>
+            </p>
+        </div>
+    </div>
+</div>
