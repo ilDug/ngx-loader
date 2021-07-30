@@ -14,13 +14,20 @@ export class LoaderDirective implements OnChanges {
     ) { }
 
     @Input('dagLoader') loading: boolean = false;
-    @Input() type: 'spinner' | 'bouncing' | 'pulsing' = 'pulsing';
-    @Input() fullScreen: boolean = true;
+    @Input() dagLoaderType: 'spinner' | 'bouncing' | 'pulsing' = 'pulsing';
+    @Input() dagLoaderFullScreen: boolean = true;
+    @Input() dagLoaderColor: string = '#333';
 
     private viewIndex: number = undefined;
 
     ngOnChanges() {
         this.load()
+        console.log(
+            this.dagLoaderType,
+            this.dagLoaderColor,
+            this.dagLoaderFullScreen
+        );
+
     }
 
 
@@ -32,6 +39,10 @@ export class LoaderDirective implements OnChanges {
             /** crea lo spinner */
             const factory = this.createComponentFactory()
             const compRef = this.vcr.createComponent(factory)
+
+
+            /** assegna il colore */
+            compRef.instance.color = this.dagLoaderColor;
 
             /** salva il numerod'indice della view */
             this.viewIndex = this.vcr.indexOf(compRef.hostView)
@@ -46,9 +57,12 @@ export class LoaderDirective implements OnChanges {
     }
 
 
+
+
+
     createComponentFactory(): ComponentFactory<SpinnerLoaderComponent | BouncingLoaderComponent | PulsingLoaderComponent> {
         let componentType: any
-        switch (this.type) {
+        switch (this.dagLoaderType) {
             case 'spinner':
                 componentType = SpinnerLoaderComponent
                 break;
