@@ -24,12 +24,6 @@ export class LoaderDirective implements OnChanges {
 
     ngOnChanges() {
         this.load()
-        console.log(
-            this.dagLoaderType,
-            this.dagLoaderColor,
-            this.dagLoaderFullScreen
-        );
-
     }
 
 

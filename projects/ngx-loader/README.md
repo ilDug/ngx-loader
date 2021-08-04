@@ -1,24 +1,63 @@
-# NgxLoader
+# ngx-loader
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+spinner loader directive for angular project
 
-## Code scaffolding
+## Install 
+```
+npm i @ildug/ngx-loader
+```
 
-Run `ng generate component component-name --project ngx-loader` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-loader`.
-> Note: Don't forget to add `--project ngx-loader` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+## Usage
 
-Run `ng build ngx-loader` to build the project. The build artifacts will be stored in the `dist/` directory.
+Import the module **NgxLoaderModule** into the main module of App.
 
-## Publishing
+``` typescript
+...
+import { NgxLoaderModule } from 'ngx-loader';
 
-After building your library with `ng build ngx-loader`, go to the dist folder `cd dist/ngx-loader` and run `npm publish`.
 
-## Running unit tests
+@NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        ...,
+        NgxLoaderModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+Use th structural diretcive in Template. Prefix the directive with *. 
 
-Run `ng test ngx-loader` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Use a variable to trigger the spinner.
+**Always use a parent container or div.**
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+``` html
+    <div class="box">
+        <div *dagLoader="loading">
+            <h1>B</h1>
+        </div>
+    </div>
+```
+
+with options:
+``` html
+    <div class="box">
+        <div *dagLoader="loading; color:'#e4b2b2'; fullScreen: false; type:'pulsing';">
+            <h1>B</h1>
+        </div>
+    </div>
+```
+
+## Options
+| | |
+| ---: | --- |
+| **color**: | *Spinner color as HEX string* |
+| **fullScreen**: | *whether spinner cover the parent element or the whole screen.* |
+| **type**: | *spinner type. Select between PULSING (default),  BOUNCING or SPINNER. |
+
+
