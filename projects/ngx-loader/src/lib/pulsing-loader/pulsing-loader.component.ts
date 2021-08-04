@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { LoaderComponent } from '../loader.component';
 
 @Component({
@@ -7,5 +7,5 @@ import { LoaderComponent } from '../loader.component';
   styleUrls: ['./pulsing-loader.component.scss']
 })
 export class PulsingLoaderComponent extends LoaderComponent {
-
+    @HostBinding('class.full-screen') fullScreen: boolean;
 }

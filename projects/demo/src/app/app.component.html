@@ -1,51 +1,55 @@
 <div class="container">
-    <div class="row">
-        <div class="col-12 justify-content-center flex-row d-flex">
-            <div class="box" *dagLoader="loading; type:'bouncing'; color:'#e4b2b2'">
-                <h1>A</h1>
-            </div>
-            <div class="box">
-                <h1>B</h1>
-            </div>
-            <div class="box">
-                <h1>C</h1>
-            </div>
-        </div>
-        
-        </div>
-        
+    <div *dagLoader="false">
         <div class="row">
             <div class="col-12 justify-content-center flex-row d-flex">
-            <div class="box">
-                <h1>A</h1>
-            </div>
-            <div class="box" *dagLoader="loading; color:'#e4b2b2'">
-                <h1>B</h1>
-            </div>
-            <div class="box">
-                <h1>C</h1>
-            </div>
+                <div class="box">
+                    <h1>A</h1>
+                </div>
+                <div class="box">
+                    <h1>B</h1>
+                </div>
+                <div class="box">
+                    <h1>C</h1>
+                </div>
+                </div>
         </div>
-    </div>
-<div class="row">
-    <div class="col-12 justify-content-center flex-row d-flex">
-        <div class="box">
-            <h1>A</h1>
-        </div>
-        <div class="box">
-            <h1>B</h1>
-        </div>
-        <div class="box" *dagLoader="loading; type:'spinner'; color:'#e4b2b2'">
-            <h1>C</h1>
-        </div>
-    </div>
-</div>
 
-    <div class="row">
-        <div class="col-12">
-            <p>
-                <a href="#" (click)="load()" class="btn btn-primary">Toggle Loader</a>
-            </p>
+        <div class="row">
+            <div class="col-12 justify-content-center flex-row d-flex">
+                <div class="box">
+                    <h1>A</h1>
+                </div>
+                <div class="box">
+                    <div *dagLoader="loading; color:'#e4b2b2'; fullScreen: false; type:'pulsing';">
+                        <h1>B</h1>
+                    </div>
+                </div>
+                <div class="box">
+                    <h1>C</h1>
+                </div>
+                </div>
+                </div>
+
+        <div class="row">
+            <div class="col-12 justify-content-center flex-row d-flex">
+                <div class="box">
+                    <h1>A</h1>
+                </div>
+                <div class="box">
+                    <h1>B</h1>
+                </div>
+                <div class="box">
+                    <h1>C</h1>
+                </div>
+                </div>
+                </div>
         </div>
+        </div>
+
+<div class="row">
+    <div class="col-12">
+        <p>
+            <a href="#" (click)="load()" class="btn btn-primary">Toggle Loader</a>
+        </p>
     </div>
 </div>

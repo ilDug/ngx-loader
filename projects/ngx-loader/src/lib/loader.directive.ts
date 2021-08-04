@@ -1,4 +1,4 @@
-import { ComponentFactory, ComponentFactoryResolver, ComponentRef, Directive, Input, OnChanges, TemplateRef, ViewContainerRef } from '@angular/core';
+import { ComponentFactory, ComponentFactoryResolver, ComponentRef, Directive, ElementRef, Input, OnChanges, Renderer2, TemplateRef, ViewContainerRef } from '@angular/core';
 import { BouncingLoaderComponent } from './bouncing-loader/bouncing-loader.component';
 import { PulsingLoaderComponent } from './pulsing-loader/pulsing-loader.component';
 import { SpinnerLoaderComponent } from './spinner-loader/spinner-loader.component';
@@ -10,7 +10,9 @@ export class LoaderDirective implements OnChanges {
     constructor(
         private vcr: ViewContainerRef,
         private cfr: ComponentFactoryResolver,
-        private tmpRef: TemplateRef<any>
+        private tmpRef: TemplateRef<any>,
+        // private el: ElementRef,
+        private r: Renderer2
     ) { }
 
     @Input('dagLoader') loading: boolean = false;
@@ -33,16 +35,34 @@ export class LoaderDirective implements OnChanges {
 
     private load() {
         if (this.loading) {
+
+            /** assegna la posizione RELATIVE al container */
+            const { parentElement }: HTMLElement = this.tmpRef.elementRef.nativeElement
+            this.r.setStyle(parentElement, 'position', 'relative')
+
+
+            /** determina le dimensioni del parent */
+            // const { clientWidth: w, clientHeight: h } = parentElement
+            // console.log(w, h);
+
+            /** fissa le dimensioni del parent */
+            // this.r.setStyle(parentElement, 'width', `${w}px`)
+            // this.r.setStyle(parentElement, 'height', `${h}px`)
+
+
             /** svuota il container di tutto il contenuto */
-            this.vcr.clear()
+            // this.vcr.clear()
+
 
             /** crea lo spinner */
             const factory = this.createComponentFactory()
             const compRef = this.vcr.createComponent(factory)
 
-
             /** assegna il colore */
             compRef.instance.color = this.dagLoaderColor;
+            compRef.instance.fullScreen = this.dagLoaderFullScreen;
+
+
 
             /** salva il numerod'indice della view */
             this.viewIndex = this.vcr.indexOf(compRef.hostView)
@@ -51,8 +71,10 @@ export class LoaderDirective implements OnChanges {
             /** elimina lo spinenr */
             this.vcr.remove(this.viewIndex)
 
+
             /** ripristina il contenuto */
-            this.vcr.createEmbeddedView(this.tmpRef)
+            if (this.vcr.length === 0)
+                this.vcr.createEmbeddedView(this.tmpRef)
         }
     }
 

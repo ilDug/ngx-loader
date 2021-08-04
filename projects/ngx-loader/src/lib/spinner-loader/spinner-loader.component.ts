@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { LoaderComponent } from '../loader.component';
 
 @Component({
@@ -7,4 +7,5 @@ import { LoaderComponent } from '../loader.component';
   styleUrls: ['./spinner-loader.component.scss']
 })
 export class SpinnerLoaderComponent extends LoaderComponent {
+    @HostBinding('class.full-screen') fullScreen: boolean;
 }
