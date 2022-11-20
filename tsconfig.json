@@ -19,7 +19,8 @@
     ],
     "paths": {
       "ngx-loader": [
-        "projects/ngx-loader/src/public-api.ts"
+        "projects/ngx-loader/src/public-api.ts",
+        "dist/ngx-loader"
       ]
     },
     "strict": false
