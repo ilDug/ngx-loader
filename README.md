@@ -1,5 +1,7 @@
 # ngx-loader
 
+[![Publish Node Package](https://github.com/ilDug/ngx-loader/actions/workflows/publish.yml/badge.svg)](https://github.com/ilDug/ngx-loader/actions/workflows/publish.yml)
+
 spinner loader directive for angular project
 
 ## Install 
