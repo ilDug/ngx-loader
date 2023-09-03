@@ -1,15 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+   selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-    public loading: boolean = false;
-    load() {
-        this.loading = !this.loading
-
-    }
+   title = 'Ngx-Loader';
+   public loading: boolean = true;
 }

@@ -1,55 +1,55 @@
 <div class="container">
-    <div *dagLoader="false">
-        <div class="row">
-            <div class="col-12 justify-content-center flex-row d-flex">
-                <div class="box">
-                    <h1>A</h1>
-                </div>
-                <div class="box">
-                    <h1>B</h1>
-                </div>
-                <div class="box">
-                    <h1>C</h1>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12 justify-content-center flex-row d-flex">
-                <div class="box">
-                    <h1>A</h1>
-                </div>
-                <div class="box">
-                    <div *dagLoader="loading; color:'#e4b2b2'; fullScreen: false; type:'pulsing';">
-                        <h1>B</h1>
-                    </div>
-                </div>
-                <div class="box">
-                    <h1>C</h1>
-                </div>
-            </div>
-        </div>
+   <div class="titles">
+      <h1>ngx-loader</h1>
+      <h3>Angular Loader/Spinner Directives</h3>
 
-        <div class="row">
-            <div class="col-12 justify-content-center flex-row d-flex">
-                <div class="box">
-                    <h1>A</h1>
-                </div>
-                <div class="box">
-                    <h1>B</h1>
-                </div>
-                <div class="box">
-                    <h1>C</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+      <p>Usage with options:</p>
+      <pre>
+<code class="language-html">
+&lt;div class=&quot;box&quot;&gt;
+   &lt;div *dagLoader=&quot;loading; color:&#39;#e4b2b2&#39;; fullScreen: false; type:&#39;pulsing&#39;;&quot;&gt;
+      &lt;h1&gt;It&#39;s a trap!&lt;/h1&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
 
-<div class="row">
-    <div class="col-12">
-        <p>
-            <a href="#" (click)="load()" class="btn btn-primary">Toggle Loader</a>
-        </p>
-    </div>
+
+   </div>
+
+   <div id="github">
+      <a href="https://github.com/ilDug/ngx-loader">
+         <span>
+            <img src="assets/github.svg" alt="fork me on github" title="fork me on github">
+         </span>
+      </a>
+   </div>
+
+
+
+   <div class="example">
+      <p style="text-align: center;">
+         <a href="#" class="btn"  (click)="loading=!loading">Toggle spinner</a>
+      </p>
+      <h4>Bouncing</h4>
+      <div class="box1">
+         <div *dagLoader="loading; color:'#e4b2b2'; fullScreen: false; type:'bouncing';">
+            <p>...it's not a moon it's a space station...</p>
+         </div>
+      </div>
+      <h4>Pulsing</h4>
+      <div class="box1">
+         <div *dagLoader="loading; color:'rgb(228, 220, 178)'; fullScreen: false; type:'pulsing';">
+            <p>...it's not a moon it's a space station...</p>
+         </div>
+      </div>
+      <h4>Spinner</h4>
+      <div class="box1">
+         <div *dagLoader="loading; color:'#e4b2b2'; fullScreen: false; type:'spinner';">
+            <p>...it's not a moon it's a space station...</p>
+         </div>
+      </div>
+
+   </div>
 </div>

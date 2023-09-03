@@ -1,11 +1,11 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
-import { LoaderComponent } from '../loader.component';
+import { Component, HostBinding } from '@angular/core';
+import { Loader } from '../loader.class';
 
 @Component({
   selector: 'dag-spinner-loader',
   templateUrl: './spinner-loader.component.html',
-  styleUrls: ['./spinner-loader.component.scss']
+   styleUrls: ['./spinner-loader.component.scss']
 })
-export class SpinnerLoaderComponent extends LoaderComponent {
-    @HostBinding('class.full-screen') fullScreen: boolean;
+export class SpinnerLoaderComponent extends Loader {
+   @HostBinding('class.full-screen') public fullScreen: boolean;
 }

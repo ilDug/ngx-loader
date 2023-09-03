@@ -1,11 +1,11 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
-import { LoaderComponent } from '../loader.component';
+import { Component, HostBinding } from '@angular/core';
+import { Loader } from '../loader.class';
 
 @Component({
   selector: 'dag-pulsing-loader',
   templateUrl: './pulsing-loader.component.html',
-  styleUrls: ['./pulsing-loader.component.scss']
+   styleUrls: ['./pulsing-loader.component.scss']
 })
-export class PulsingLoaderComponent extends LoaderComponent {
-    @HostBinding('class.full-screen') fullScreen: boolean;
+export class PulsingLoaderComponent extends Loader {
+   @HostBinding('class.full-screen') fullScreen: boolean;
 }

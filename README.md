@@ -3,12 +3,13 @@
 [![Publish Node Package](https://github.com/ilDug/ngx-loader/actions/workflows/publish.yml/badge.svg)](https://github.com/ilDug/ngx-loader/actions/workflows/publish.yml)
 
 spinner loader directive for angular project
+See [demo](https://ildug.github.io/ngx-loader/)
 
 ## Install 
 ```
 npm i @ildug/ngx-loader
 ```
-
+Require Node.js versione equal or greater than **16.x**
 
 ## Usage
 
@@ -41,7 +42,7 @@ Use a variable to trigger the spinner.
 ``` html
     <div class="box">
         <div *dagLoader="loading">
-            <h1>B</h1>
+            <h1>...it's not a moon it's a space station...</h1>
         </div>
     </div>
 ```
@@ -50,7 +51,7 @@ with options:
 ``` html
     <div class="box">
         <div *dagLoader="loading; color:'#e4b2b2'; fullScreen: false; type:'pulsing';">
-            <h1>B</h1>
+            <h1>It's a trap!</h1>
         </div>
     </div>
 ```

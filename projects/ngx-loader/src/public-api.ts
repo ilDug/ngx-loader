@@ -3,4 +3,4 @@
  */
 
 export * from './lib/ngx-loader.module';
-export * from './lib/loader.directive';
+export * from './lib/ngx-loader.directive';
