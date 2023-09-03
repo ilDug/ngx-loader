@@ -8,20 +8,17 @@ import { PulsingLoaderComponent } from './pulsing-loader/pulsing-loader.componen
 
 
 @NgModule({
-  declarations: [
-    NgxLoaderDirective,
-    SpinnerLoaderComponent,
-    BouncingLoaderComponent,
-    PulsingLoaderComponent
-  ],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    NgxLoaderDirective,
-    SpinnerLoaderComponent,
-    BouncingLoaderComponent,
-    PulsingLoaderComponent
-  ]
+   declarations: [
+      NgxLoaderDirective,
+      SpinnerLoaderComponent,
+      BouncingLoaderComponent,
+      PulsingLoaderComponent
+   ],
+   imports: [
+      CommonModule
+   ],
+   exports: [
+      NgxLoaderDirective
+   ]
 })
 export class NgxLoaderModule { }
