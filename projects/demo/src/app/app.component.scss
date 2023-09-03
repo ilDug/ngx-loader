@@ -1,76 +1,86 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap");
 
-*{
-    box-sizing: border-box;
+$colorDrag: rgb(185, 174, 247);
+
+* {
+   box-sizing: border-box;
 }
 
-.container{
-    font-family: 'Comfortaa', cursive;
-   top:0;
-   left:0;
-   right:0;
-   bottom:0;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(234,234,234);
+.btn {
+   padding: 1rem;
+   border: 1px solid;
+   background-color: $colorDrag;
+   border-color: darken($colorDrag, 10%);
+   text-decoration: none;
+   &:hover{
+      background-color: darken($colorDrag, 10%);;
+   }
+}
 
-    #github{
-        margin: 0 auto;
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-        img{
-            height: 30px;
-        }
-    }
-    .titles{
-        text-align: center;
-        padding: 2rem;
-        color: rgb(100, 100, 100);
+.container {
+   font-family: "Comfortaa", cursive;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   position: absolute;
+   margin: 0;
+   padding: 0;
+   background-color: rgb(234, 234, 234);
 
-        margin: 0 auto;
-        position: relative;
+   #github {
+      margin: 0 auto;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      img {
+         height: 30px;
+      }
+   }
+   .titles {
+      text-align: center;
+      padding: 2rem;
+      color: rgb(100, 100, 100);
 
-        h1{
-            font-size: 3rem;
-            color:rgb(120, 141, 153);
-        }
-        h4{
-            color: rgb(60, 98, 121);
-            font-weight: bolder;
-        }
+      margin: 0 auto;
+      position: relative;
 
-        pre{
-            padding:1rem;
-            background-color:rgb(224, 208, 208);
-            overflow: scroll;
-            margin: 0 auto;
-            max-width: 400px;
-            text-align: start;
-        }
-    }
+      h1 {
+         font-size: 3rem;
+         color: rgb(120, 141, 153);
+      }
+      h4 {
+         color: rgb(60, 98, 121);
+         font-weight: bolder;
+      }
 
+      pre {
+         padding: 1rem;
+         background-color: rgb(224, 208, 208);
+         overflow: scroll;
+         margin: 0 auto;
+         max-width: 400px;
+         text-align: start;
+      }
+   }
 
-    .example{
-        display: flex;
-        flex-direction: column;
-        width: 380px;
-        margin: 0 auto;
+   .example {
+      display: flex;
+      flex-direction: column;
+      width: 380px;
+      margin: 0 auto;
 
-        $colorDrag : rgb(185, 174, 247);
-        .box1{
-            padding:1rem;
-            border-style: solid;
-            border-width: 5px;
-            border-radius: 25px;
-            width: 100%;
-            margin-bottom: 2rem;
-            text-align: center;
-            background-color: $colorDrag;
-            border-color: darken($colorDrag, 10%);
-            min-height: 10rem;
-        }
-
-    }
+      .box1 {
+         padding: 1rem;
+         border-style: solid;
+         border-width: 5px;
+         border-radius: 25px;
+         width: 100%;
+         margin-bottom: 2rem;
+         text-align: center;
+         background-color: $colorDrag;
+         border-color: darken($colorDrag, 10%);
+         min-height: 10rem;
+      }
+   }
 }

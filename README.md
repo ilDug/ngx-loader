@@ -1,6 +1,7 @@
 # ngx-loader
 
 spinner loader directive for angular project
+See [demo](https://ildug.github.io/ngx-loader/)
 
 ## Install 
 ```
