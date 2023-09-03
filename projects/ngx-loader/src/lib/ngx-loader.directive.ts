@@ -15,9 +15,9 @@ export class NgxLoaderDirective implements OnChanges {
    ) { }
 
    @Input('dagLoader') loading: boolean = false;
-   @Input('type') dagLoaderType: 'spinner' | 'bouncing' | 'pulsing' = 'pulsing';
-   @Input('fullScreen') dagLoaderFullScreen: boolean = true;
-   @Input('color') dagLoaderColor: string = '#333';
+   @Input() dagLoaderType: 'spinner' | 'bouncing' | 'pulsing' = 'pulsing';
+   @Input() dagLoaderFullScreen: boolean = true;
+   @Input() dagLoaderColor: string = '#333';
 
    private viewIndex: number = undefined;
 
@@ -28,6 +28,7 @@ export class NgxLoaderDirective implements OnChanges {
 
    private load() {
       if (this.loading) {
+
 
          /** assegna la posizione RELATIVE al container */
          const { parentElement }: HTMLElement = this.tmpRef.elementRef.nativeElement

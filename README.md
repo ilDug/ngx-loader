@@ -39,7 +39,7 @@ Use a variable to trigger the spinner.
 ``` html
     <div class="box">
         <div *dagLoader="loading">
-            <h1>B</h1>
+            <h1>...it's not a moon it's a space station...</h1>
         </div>
     </div>
 ```
@@ -48,7 +48,7 @@ with options:
 ``` html
     <div class="box">
         <div *dagLoader="loading; color:'#e4b2b2'; fullScreen: false; type:'pulsing';">
-            <h1>B</h1>
+            <h1>It's a trap!</h1>
         </div>
     </div>
 ```
