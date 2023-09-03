@@ -10,6 +10,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "ngx-loader": [
+        "projects/ngx-loader/src/public-api.ts",
+        "dist/ngx-loader"
+      ]
+    },
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
@@ -17,12 +23,6 @@
       "ES2022",
       "dom"
     ],
-    "paths": {
-      "ngx-loader": [
-        "projects/ngx-loader/src/public-api.ts",
-        "dist/ngx-loader"
-      ]
-    },
     "strict": false
   },
   "angularCompilerOptions": {

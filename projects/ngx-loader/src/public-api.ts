@@ -2,5 +2,5 @@
  * Public API Surface of ngx-loader
  */
 
-export * from './lib/ngx-loader.module';
-export * from './lib/loader.directive';
+export * from './lib/ngx-loader.service';
+export * from './lib/ngx-loader.component';

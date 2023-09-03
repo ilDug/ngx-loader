@@ -1,63 +1,24 @@
-# ngx-loader
+# NgxLoader
 
-spinner loader directive for angular project
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
-## Install 
-```
-npm i @ildug/ngx-loader
-```
+## Code scaffolding
 
+Run `ng generate component component-name --project ngx-loader` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-loader`.
+> Note: Don't forget to add `--project ngx-loader` or else it will be added to the default project in your `angular.json` file. 
 
-## Usage
+## Build
 
-Import the module **NgxLoaderModule** into the main module of App.
+Run `ng build ngx-loader` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-``` typescript
-...
-import { NgxLoaderModule } from 'ngx-loader';
+## Publishing
 
+After building your library with `ng build ngx-loader`, go to the dist folder `cd dist/ngx-loader` and run `npm publish`.
 
-@NgModule({
-    declarations: [
-        AppComponent
-    ],
-    imports: [
-        ...,
-        NgxLoaderModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
-Use th structural diretcive in Template. Prefix the directive with *. 
+## Running unit tests
 
-Use a variable to trigger the spinner.
-**Always use a parent container or div.**
+Run `ng test ngx-loader` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Further help
 
-``` html
-    <div class="box">
-        <div *dagLoader="loading">
-            <h1>B</h1>
-        </div>
-    </div>
-```
-
-with options:
-``` html
-    <div class="box">
-        <div *dagLoader="loading; color:'#e4b2b2'; fullScreen: false; type:'pulsing';">
-            <h1>B</h1>
-        </div>
-    </div>
-```
-
-## Options
-| | |
-| ---: | --- |
-| **color**: | *Spinner color as HEX string* |
-| **fullScreen**: | *whether spinner cover the parent element or the whole screen.* |
-| **type**: | *spinner type. Select between PULSING (default),  BOUNCING or SPINNER. |
-
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

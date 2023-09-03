@@ -2,12 +2,17 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-root',
+  selector: 'dag-ngx-loader',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    <p>
+      ngx-loader works!
+    </p>
+  `,
+  styles: [
+  ]
 })
-export class AppComponent {
-  title = 'demo';
+export class NgxLoaderComponent {
+
 }
