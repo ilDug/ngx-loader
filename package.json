@@ -1,43 +1,43 @@
 {
-  "name": "@ildug/ngx-loader",
-  "version": "1.0.0",
-  "author": {
-    "name": "ilDug"
-  },
-  "description": "spinner loader angular directive",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ilDug/ngx-loader.git"
-  },
-  "license": "MIT",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build ngx-loader",
-    "build:pages": "ng build demo",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "^16.2.3",
-    "@angular/common": "^16.2.3",
-    "@angular/compiler": "^16.2.3",
-    "@angular/core": "^16.2.3",
-    "@angular/forms": "^16.2.3",
-    "@angular/platform-browser": "^16.2.3",
-    "@angular/platform-browser-dynamic": "^16.2.3",
-    "@angular/router": "^16.2.3",
-    "bootstrap": "^5.2.2",
-    "rxjs": "^7.8.1",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.13.1"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^16.2.1",
-    "@angular/cli": "~16.2.1",
-    "@angular/compiler-cli": "^16.2.3",
-    "ng-packagr": "^16.2.2",
-    "typescript": "~5.1.6"
-  }
+   "name": "@ildug/ngx-loader",
+   "version": "1.0.0",
+   "author": {
+      "name": "ilDug"
+   },
+   "description": "spinner loader angular directive",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/ilDug/ngx-loader.git"
+   },
+   "license": "MIT",
+   "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build ngx-loader",
+      "build:pages": "ng build demo --base-href https://ildug.github.io/ngx-loader/",
+      "watch": "ng build --watch --configuration development",
+      "test": "ng test"
+   },
+   "private": true,
+   "dependencies": {
+      "@angular/animations": "^16.2.3",
+      "@angular/common": "^16.2.3",
+      "@angular/compiler": "^16.2.3",
+      "@angular/core": "^16.2.3",
+      "@angular/forms": "^16.2.3",
+      "@angular/platform-browser": "^16.2.3",
+      "@angular/platform-browser-dynamic": "^16.2.3",
+      "@angular/router": "^16.2.3",
+      "bootstrap": "^5.2.2",
+      "rxjs": "^7.8.1",
+      "tslib": "^2.3.0",
+      "zone.js": "~0.13.1"
+   },
+   "devDependencies": {
+      "@angular-devkit/build-angular": "^16.2.1",
+      "@angular/cli": "~16.2.1",
+      "@angular/compiler-cli": "^16.2.3",
+      "ng-packagr": "^16.2.2",
+      "typescript": "~5.1.6"
+   }
 }
