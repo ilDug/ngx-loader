@@ -7,7 +7,7 @@ See [demo](https://ildug.github.io/ngx-loader/)
 ```
 npm i @ildug/ngx-loader
 ```
-
+Require Node.js versione equal or greater than **16.x**
 
 ## Usage
 
